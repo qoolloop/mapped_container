@@ -22,8 +22,6 @@ RUN export uid=${uid} gid=${gid} && \
     chmod 0440 /etc/sudoers.d/${username} && \
     mkdir -p /home/${username} && \
     chown ${uid}:${gid} -R /home/${username}
-#    mkdir -p /src && \
-#    chown ${uid}:${gid} -R /src
 
 USER ${username}
 
