@@ -4,5 +4,5 @@
 
 source setvariables.sh
 
-docker exec -it $CONTAINER_BASE_NAME.$USER bash
+docker exec -it $CONTAINER_BASE_NAME bash
 

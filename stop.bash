@@ -4,4 +4,4 @@
 
 source setvariables.sh
 
-docker stop $CONTAINER_BASE_NAME.$USER
+docker stop $CONTAINER_BASE_NAME

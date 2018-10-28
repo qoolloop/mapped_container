@@ -7,4 +7,4 @@
 
 source setvariables.sh
 
-docker build --build-arg uid=$UID --build-arg gid=$GROUPS -t $IMAGE_BASE_NAME/$USER .
+docker build --build-arg uid=$UID --build-arg gid=$GROUPS -t $IMAGE_BASE_NAME .

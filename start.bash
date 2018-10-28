@@ -4,4 +4,4 @@
 
 source setvariables.sh
 
-docker start $CONTAINER_BASE_NAME.$USER
+docker start $CONTAINER_BASE_NAME

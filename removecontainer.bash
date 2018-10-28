@@ -4,4 +4,4 @@
 
 source setvariables.sh
 
-docker rm $CONTAINER_BASE_NAME.$USER
+docker rm $CONTAINER_BASE_NAME

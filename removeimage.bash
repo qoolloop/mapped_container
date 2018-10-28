@@ -4,4 +4,4 @@
 
 source setvariables.sh
 
-docker rmi $IMAGE_BASE_NAME/$USER
+docker rmi $IMAGE_BASE_NAME

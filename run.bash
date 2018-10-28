@@ -23,4 +23,4 @@ mkdir -p $1
 
 source setvariables.sh
 
-docker run -ti -d -v "$(readlink -f $1)":/src --name $CONTAINER_BASE_NAME.$USER $options $IMAGE_BASE_NAME/$USER
+docker run -ti -d -v "$(readlink -f $1)":/src --name $CONTAINER_BASE_NAME $options $IMAGE_BASE_NAME
