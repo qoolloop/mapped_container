@@ -2,7 +2,9 @@
 
 # Gets into the bash console of the container
 
-source setvariables.sh
+this_folder=$(dirname $(readlink -f "${BASH_SOURCE[0]}"))
 
-docker exec -it $CONTAINER_BASE_NAME bash
+source $this_folder/setvariables.sh
+
+docker exec -it $CONTAINER_NAME bash
 

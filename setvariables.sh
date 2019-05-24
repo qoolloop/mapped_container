@@ -1,5 +1,9 @@
 # Defines variables that name the container and image
 
-CONTAINER_BASE_NAME=qoolloop.mapped_container.$USER
+BASE_IMAGE_NAME=debian:9
 
-IMAGE_BASE_NAME=qoolloop/mapped_container/$USER
+converted_base_image_name=${BASE_IMAGE_NAME/:/-}
+
+IMAGE_NAME=qoolloop/$converted_base_image_name/mapped_container/$USER
+
+CONTAINER_NAME=qoolloop.$converted_base_image_name.mapped_container.$USER

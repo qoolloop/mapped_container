@@ -21,6 +21,8 @@ fi
 # necessary, because otherwise the folder might be created with root ownership
 mkdir -p $1
 
-source setvariables.sh
+this_folder=$(dirname $(readlink -f "${BASH_SOURCE[0]}"))
 
-docker run -ti -d -v "$(readlink -f $1)":/src --name $CONTAINER_BASE_NAME $options $IMAGE_BASE_NAME
+source $this_folder/setvariables.sh
+
+docker run -ti -d -v "$(readlink -f $1)":/src --name $CONTAINER_NAME $options $IMAGE_NAME

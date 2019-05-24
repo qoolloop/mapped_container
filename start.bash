@@ -2,6 +2,8 @@
 
 # Start the container stopped by stop.bash
 
-source setvariables.sh
+this_folder=$(dirname $(readlink -f "${BASH_SOURCE[0]}"))
 
-docker start $CONTAINER_BASE_NAME
+source $this_folder/setvariables.sh
+
+docker start $CONTAINER_NAME

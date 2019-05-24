@@ -2,6 +2,8 @@
 
 # Stop the container started by run.bash and start.bash
 
-source setvariables.sh
+this_folder=$(dirname $(readlink -f "${BASH_SOURCE[0]}"))
 
-docker stop $CONTAINER_BASE_NAME
+source $this_folder/setvariables.sh
+
+docker stop $CONTAINER_NAME

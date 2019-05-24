@@ -2,6 +2,8 @@
 
 # Remove container created by run.bash
 
-source setvariables.sh
+this_folder=$(dirname $(readlink -f "${BASH_SOURCE[0]}"))
 
-docker rm $CONTAINER_BASE_NAME
+source $this_folder/setvariables.sh
+
+docker rm $CONTAINER_NAME

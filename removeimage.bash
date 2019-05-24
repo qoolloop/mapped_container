@@ -2,6 +2,8 @@
 
 # Remove image built by build.bash
 
-source setvariables.sh
+this_folder=$(dirname $(readlink -f "${BASH_SOURCE[0]}"))
 
-docker rmi $IMAGE_BASE_NAME
+source $this_folder/setvariables.sh
+
+docker rmi $IMAGE_NAME
