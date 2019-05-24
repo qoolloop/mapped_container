@@ -1,4 +1,5 @@
-FROM debian:9
+ARG base_image
+FROM $base_image
 
 ARG username=docker_user
 ARG uid
