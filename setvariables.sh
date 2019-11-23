@@ -1,6 +1,6 @@
 # Defines variables that name the container and image
 
-BASE_IMAGE_NAME=debian:9
+BASE_IMAGE_NAME=debian:10
 
 converted_base_image_name=${BASE_IMAGE_NAME/:/-}
 
