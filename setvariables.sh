@@ -1,6 +1,6 @@
 # Defines variables that name the container and image
 
-BASE_IMAGE_NAME=debian:10
+BASE_IMAGE_NAME=python:3.8-buster
 
 converted_base_image_name=${BASE_IMAGE_NAME/:/-}
 
