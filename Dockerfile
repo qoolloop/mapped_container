@@ -17,7 +17,7 @@ RUN apt-get install -y \
     gcc cmake
 
 RUN export uid=${uid} gid=${gid} && \
-    addgroup --gid ${gid} ${username} && \
+    ! addgroup --gid ${gid} ${username} && \
     useradd --shell /bin/bash --create-home --no-user-group --uid ${uid} --gid ${gid} --groups sudo,${gid} ${username} && \
     echo "${username} ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/${username} && \
     chmod 0440 /etc/sudoers.d/${username}
