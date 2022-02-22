@@ -22,6 +22,7 @@ RUN export uid=${uid} gid=${gid} && \
     echo "${username} ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/${username} && \
     chmod 0440 /etc/sudoers.d/${username}
 
+RUN pip install --upgrade pip
 ADD requirements.txt /tmp
 RUN pip install -r /tmp/requirements.txt
 
