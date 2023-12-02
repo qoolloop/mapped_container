@@ -1,6 +1,6 @@
 # Defines variables that name the container and image
 
-BASE_IMAGE_NAME=python:3.10-buster
+BASE_IMAGE_NAME=python:3.10-slim-buster
 
 converted_base_image_name=${BASE_IMAGE_NAME/:/-}
 
